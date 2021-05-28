@@ -7,6 +7,12 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@bytemd/plugin-gfm": "^1.9.0",
+    "@bytemd/plugin-medium-zoom": "^1.9.0",
+    "@mdi/font": "5.9.55",
+    "bytemd": "^1.9.0",
+    "element-plus": "^1.0.2-beta.28",
+    "roboto-fontface": "*",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -15,6 +21,11 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0"
+    "@vue/compiler-sfc": "^3.0.0",
+    "axios": "^0.18.0",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.4",
+    "vue-cli-plugin-axios": "^0.0.4",
+    "vue-cli-plugin-element-plus": "~0.0.13"
   }
 }

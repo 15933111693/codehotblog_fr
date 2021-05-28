@@ -1,30 +1,59 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <el-backtop></el-backtop>
+  <el-container>
+    <el-header><div class="head"><c_head/></div></el-header>
+    <el-main>
+      
+      <div class="main"><router-view/></div>
+    </el-main>
+  </el-container>  
 </template>
 
+<script setup>
+  import c_head from "./components/c_head"
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*{
+  padding: 0;
+  margin: 0;
+  /* outline: 1px red solid; */
+}
+.el-header {
+  background-color: #B3C0D1;
+  color: #333;
+  height: 8vh !important;
+}
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+  min-height: 92vh;
+  height: auto;
+}
+.el-header, .el-main, .main {
+  display: flex !important;
+  justify-content: center;
 }
 
-#nav {
-  padding: 30px;
+@media (max-width: 980px) {
+.el-main{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 0px !important;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.el-header {
+  padding: 0px !important;
 }
+}
+</style>
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+<style scoped>
+.head, .main{
+  width: 960px;
+}  
+@media (max-width: 980px) {
+.head, .main{
+  width: 100%;
+}    
 }
 </style>
